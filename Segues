@@ -1,0 +1,29 @@
+// Step 1 - Create new "Cocoa Touch Class" file, give it some class name (SomeViewController) and make it a subclass of UIViewController
+
+// Step 2 - Go to Main.storyboard Interface Builder and add a View Controller
+
+// Step 3 - Go to Inspector -> Identity and set the class to the class name (SomeViewController)
+
+// Step 4 - Control drag from initial View Controller to your destination View Controller and select a segue option (EXPLAIN OPTIONS)
+
+// Step 5 - Select the segue, go to Inspector -> Attributes and give the segue an Identifer name (goToSomeViewController)
+
+// Step 6 - Trigger segue with some action on initial View Controller
+
+@IBAction func someButtonPressed (_ sender: UIButton) {
+	self.performSegue(withIdentifier: “segueIdentifierName”, sender: self)
+}
+
+// Step 7 - Prepare for segue and pass some variables to destination View Controller
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+	if segue.identifier == "goToSomeViewController" {
+	let destinationVC = segue.destination as! SomeViewController
+	
+	<pass some variables>
+	}
+}
+
+// Step 8 - Dismiss new View Controller
+@IBAction func someButtonPressed(_ sender: UIButton) {
+	self.dismiss(animated: true, completion: nil)
+}
