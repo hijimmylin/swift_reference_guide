@@ -4,3 +4,6 @@ You don't get an automatic memberwise initializer for your classes; you need to 
 You can define a class as being based off another class, adding any new things you want.
 When you create an instance of a class it’s called an object. If you copy that object, both copies point at the same data by default – change one, and the copy changes too.
 All three of those are massive differences, so I'm going to cover them in more depth before continuing.
+
+If you want to have one shared state that gets passed around and modified in place, you're looking for classes. You can pass them into functions or store them in arrays, modify them in there, and have that change reflected in the rest of your program.
+If you want to avoid shared state where one copy can't affect all the others, you're looking for structs. You can pass them into functions or store them in arrays, modify them in there, and they won't change wherever else they are referenced.
