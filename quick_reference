@@ -1,0 +1,19 @@
+// WKWEBVIEW EXAMPLE
+
+import WebKit
+
+if let htmlPath = Bundle.main.path(forResource: "<FILENAME>", ofType: "<FILETYPE>") {
+	let url = URL(fileURLWithPath: htmlPath)
+	let request = URLRequest(url: url)
+	webView.load(request)
+}
+
+
+// OPTIONALS
+
+Options:
+Force Unwrap
+
+Optional Binding
+
+Nil Coalescing
